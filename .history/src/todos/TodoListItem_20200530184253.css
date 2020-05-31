@@ -1,16 +1,10 @@
 .todo-item-container{
-    width: 94%;
+    width: 90%;
     margin: 0 auto;
-    margin-top: 10px;
 }
 
 .todo-align{
     text-align: left;
     font-size: medium;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.button-container{
-    display: block; 
-    text-align: right;
 }

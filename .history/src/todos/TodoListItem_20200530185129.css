@@ -1,7 +1,6 @@
 .todo-item-container{
-    width: 94%;
+    width: 90%;
     margin: 0 auto;
-    margin-top: 10px;
 }
 
 .todo-align{
@@ -11,6 +10,5 @@
 }
 
 .button-container{
-    display: block; 
-    text-align: right;
+    
 }
