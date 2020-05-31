@@ -1,0 +1,14 @@
+.todo-item-container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    border-left: 10px solid teal;
+    background-color: lightblue;
+    margin-top: 10px;
+}
+
+.newTodo{
+    background-color: yellowgreen;
+    padding: 10px;
+    border: 0 auto;
+}

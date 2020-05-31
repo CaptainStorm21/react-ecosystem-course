@@ -1,4 +1,6 @@
 .todo-item-container{
     width: 90%;
     margin: 0 auto;
+    padding: 10px;
+    background-color: lightblue;
 }

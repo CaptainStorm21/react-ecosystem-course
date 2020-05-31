@@ -1,5 +1,5 @@
 .todo-item-container {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
   padding: 10px;
   border-left: 10px solid teal;
@@ -10,7 +10,6 @@
 .new-todo-input{
     width: 60%;
     padding: 10px;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .newTodo {
   background-color: gold;
