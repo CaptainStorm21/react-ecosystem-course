@@ -11,9 +11,8 @@ const TodoList = ({ todos = [],  onRemovePressed}) => (
     <div className="list-wrapper">
         <NewTodoForm/>
         {todos.map(todo =>
-            <TodoListItem
-                todo={todo}
-                onRemovePressed = { onRemovePressed }
+            <TodoListItem todo={todo}
+        
         />)}
     </div>
 )

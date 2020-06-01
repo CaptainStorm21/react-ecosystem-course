@@ -10,10 +10,8 @@ import { removeTodo } from '../redux/actions';
 const TodoList = ({ todos = [],  onRemovePressed}) => (
     <div className="list-wrapper">
         <NewTodoForm/>
-        {todos.map(todo =>
-            <TodoListItem
-                todo={todo}
-                onRemovePressed = { onRemovePressed }
+        {todos.map(todo => <TodoListItem todo={todo}
+        
         />)}
     </div>
 )

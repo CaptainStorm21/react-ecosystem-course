@@ -13,7 +13,7 @@ const TodoList = ({ todos = [],  onRemovePressed}) => (
         {todos.map(todo =>
             <TodoListItem
                 todo={todo}
-                onRemovePressed = { onRemovePressed }
+                
         />)}
     </div>
 )
