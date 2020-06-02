@@ -1,5 +1,5 @@
 import React from "react";
-import "./TodoListItem.css";
+import './TodoListItem.css';
 
 const TodoListItem = ({ todo, onRemovePressed, onCompletedPressed }) => (
   <div className="todo-item-container">
@@ -7,7 +7,9 @@ const TodoListItem = ({ todo, onRemovePressed, onCompletedPressed }) => (
     <div className="button-container">
       {todo.isCompleted ? null : (
         <button
-          onClick={() => onCompletedPressed(todo.text)}
+          onClick={() => {
+            onCompletedPressed(todo.id);
+          }}
           className="completed-button"
         >
           Mark As Completed
@@ -23,5 +25,6 @@ const TodoListItem = ({ todo, onRemovePressed, onCompletedPressed }) => (
     </div>
   </div>
 );
+
 
 export default TodoListItem;

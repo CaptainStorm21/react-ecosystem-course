@@ -1,7 +1,6 @@
 import {
   CREATE_TODO,
-  REMOVE_TODO,
-  MARK_TODO_AS_COMPLETED
+  REMOVE_TODO, MARK_TODO_AS_COMPLETED
 } from "./actions";
 
 export const todos = (state = [], action) => {
