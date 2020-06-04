@@ -14,7 +14,7 @@ import { displayAlert } from '../thunk/thunk';
 const TodoList = ({ todos = [], onRemovePressed, isLoading, onCompletedPressed, startLoadingTodos }) => {
   useEffect(() => {
     startLoadingTodos();
-  }, []);
+  })
   const loadingMessage = <div>loading todos....</div>
   const content = (
     <div className="list-wrapper">

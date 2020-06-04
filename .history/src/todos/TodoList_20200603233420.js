@@ -13,8 +13,8 @@ import { displayAlert } from '../thunk/thunk';
 
 const TodoList = ({ todos = [], onRemovePressed, isLoading, onCompletedPressed, startLoadingTodos }) => {
   useEffect(() => {
-    startLoadingTodos();
-  }, []);
+    startLoadingTools();
+  })
   const loadingMessage = <div>loading todos....</div>
   const content = (
     <div className="list-wrapper">
@@ -36,7 +36,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  startLoadingTodos: () => dispatch(loadTodos()), 
+  startLoadingTodos: () => dispatch() 
     onRemovePressed: text => dispatch(removeTodo(text)),
   onCompletedPressed: text => dispatch(markTodoAsCompleted(text)),
   onDisplayAlertClicked: text => dispatch(displayAlert(text))

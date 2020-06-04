@@ -2,7 +2,7 @@ import React, { useEffect }  from 'react';
 import { connect } from "react-redux";
 import NewTodoForm from './NewTodoForm';
 import TodoListItem from './TodoListItem';
-import { loadTodos } from '../thunk/thunk';  
+import { load}
 import './TodoList.css';
 import {
     removeTodo,
@@ -11,10 +11,7 @@ import {
 //thunk
 import { displayAlert } from '../thunk/thunk';
 
-const TodoList = ({ todos = [], onRemovePressed, isLoading, onCompletedPressed, startLoadingTodos }) => {
-  useEffect(() => {
-    startLoadingTodos();
-  }, []);
+const TodoList = ({ todos = [], onRemovePressed, isLoading, onCompletedPressed }) => {
   const loadingMessage = <div>loading todos....</div>
   const content = (
     <div className="list-wrapper">
@@ -36,7 +33,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  startLoadingTodos: () => dispatch(loadTodos()), 
     onRemovePressed: text => dispatch(removeTodo(text)),
   onCompletedPressed: text => dispatch(markTodoAsCompleted(text)),
   onDisplayAlertClicked: text => dispatch(displayAlert(text))

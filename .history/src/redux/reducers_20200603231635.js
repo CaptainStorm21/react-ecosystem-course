@@ -12,13 +12,9 @@ export const isLoading = (state = false, action) => {
 
   switch (type) {
     case LOAD_TODOS_IN_PROGRESS:
-      return true;
-    case LOAD_TODOS_SUCCESS:
-    case LOAD_TODOS_FAILURE:
-      return false;
-    default:
-      return state;
+      return true
   }
+  c
 }
 
 export const todos = (state = [], action) => {

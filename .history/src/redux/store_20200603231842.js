@@ -11,7 +11,6 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 const reducers = {
   todos,
-  isLoading
 };
 
 const persistConfig = {

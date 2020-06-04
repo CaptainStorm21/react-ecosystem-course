@@ -1,5 +1,5 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
-import { todos, isLoading } from "./reducers";
+import { todos,  } from "./reducers";
 //stops resetting from a refresh
 import { persistReducer } from "redux-persist";
 import storage from 'redux-persist/lib/storage';
@@ -11,7 +11,6 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 const reducers = {
   todos,
-  isLoading
 };
 
 const persistConfig = {

@@ -16,8 +16,6 @@ export const isLoading = (state = false, action) => {
     case LOAD_TODOS_SUCCESS:
     case LOAD_TODOS_FAILURE:
       return false;
-    default:
-      return state;
   }
 }
 
