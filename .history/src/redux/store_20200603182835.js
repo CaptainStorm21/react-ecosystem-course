@@ -6,8 +6,7 @@ import storage from 'redux-persist/lib/storage';
 import autoMergeLevel2 from "redux-persist/lib/stateReconciler/autoMergeLevel2";
 //thunk
 import thunk from 'redux-thunk';
-//devtools
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { composeWithDevTools } from 'dev-tools-extension';
 
 
 const reducers = {
@@ -26,8 +25,5 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 export const configureStore = () =>
   createStore(
     persistedReducer,
-    composeWithDevTools(
-      applyMiddleware(thunk)
-    )
     
   );
