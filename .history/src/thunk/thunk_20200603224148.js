@@ -1,11 +1,11 @@
 import {
   loadTodosInProgress,
   loadTodosSuccess,
-  loadTodosFailure,
+  loadTodosFailiure,
 } from "../redux/actions";
 
-export const displayAlert = (text) => () => {
-  alert(text);
+export const displayAlert = () => () => {
+  alert("hello");
 };
 
 export const loadTodos = () => async (dispatch, getState) => {
@@ -14,9 +14,6 @@ export const loadTodos = () => async (dispatch, getState) => {
     const response = await fetch("http://localhost:8080/todos");
     const todos = await response.json();
     dispatch(loadTodosSuccess(todos));
-  } catch (e) {
-      dispatch(loadTodosFailure());
-      dispatch(displayAlert(e))
   }
 };
 

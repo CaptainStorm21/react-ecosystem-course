@@ -8,7 +8,7 @@ import {
     markTodoAsCompleted
 } from '../redux/actions';
 //thunk
-import { displayAlert } from '../thunk/thunk';
+import { displayAlert } from './thunk/thunk';
 
 const TodoList = ({ todos = [], onRemovePressed, onCompletedPressed }) => (
   <div className="list-wrapper">

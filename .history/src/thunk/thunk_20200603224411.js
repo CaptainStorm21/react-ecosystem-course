@@ -4,8 +4,8 @@ import {
   loadTodosFailure,
 } from "../redux/actions";
 
-export const displayAlert = (text) => () => {
-  alert(text);
+export const displayAlert = () => () => {
+  alert("hello");
 };
 
 export const loadTodos = () => async (dispatch, getState) => {
@@ -16,7 +16,6 @@ export const loadTodos = () => async (dispatch, getState) => {
     dispatch(loadTodosSuccess(todos));
   } catch (e) {
       dispatch(loadTodosFailure());
-      dispatch(displayAlert(e))
   }
 };
 

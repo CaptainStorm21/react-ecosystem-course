@@ -1,24 +1,6 @@
-import {
-  loadTodosInProgress,
-  loadTodosSuccess,
-  loadTodosFailure,
-} from "../redux/actions";
 
-export const displayAlert = (text) => () => {
-  alert(text);
-};
 
-export const loadTodos = () => async (dispatch, getState) => {
-  try {
-    dispatch(loadTodosInProgress());
-    const response = await fetch("http://localhost:8080/todos");
-    const todos = await response.json();
-    dispatch(loadTodosSuccess(todos));
-  } catch (e) {
-      dispatch(loadTodosFailure());
-      dispatch(displayAlert(e))
-  }
-};
+
 
 /*
 Now it's time to create our first thunk. Inside our to-do folder, 
@@ -58,9 +40,6 @@ we just created. So dispatch, displayAlert. And then up at the top of our compon
  to-do list component and add this argument into our mapDispatchToProps 
  function like this. We'll say text and have displayAlert get called with text, 
  and then what we can do is go back to our application and click on mark as 
- completed and we'll see that the text of each of our to-dos is now getting 
- passed to the thunk. And those are the basics of how thunks work in a React application. 
- Obviously there are much more complex things that we can do with thunks 
- and we'll take a look at that shortly. For now, let's change back this component to the way it was before. 
- So we'll delete this prop, delete this prop, and make it pass onCompletePressed again.
+ completed and we'll see that the text of each of our to-dos is now getting passed to the thunk. And those are the basics of how thunks work in a React application. Obviously there are much more complex things that we can do with thunks and we'll take a look at that shortly. For now, let's change back this component to the way it was before. So we'll delete this prop, delete this prop, and make it pass onCompletePressed again.
+
 */

@@ -32,5 +32,5 @@ export const loadTodosSuccess = todos => ({
 
 export const LOAD_TODOS_FAILURE = 'LOAD_TODO_FAILURE';
 export const loadTodosFailure = todos => ({
-    type: LOAD_TODOS_FAILURE,
+    type: LOAD_TODO_FAILURE,
 })

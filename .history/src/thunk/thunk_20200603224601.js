@@ -5,7 +5,7 @@ import {
 } from "../redux/actions";
 
 export const displayAlert = (text) => () => {
-  alert(text);
+  alert("hello");
 };
 
 export const loadTodos = () => async (dispatch, getState) => {

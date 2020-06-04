@@ -7,8 +7,7 @@ import {
     removeTodo,
     markTodoAsCompleted
 } from '../redux/actions';
-//thunk
-import { displayAlert } from '../thunk/thunk';
+//
 
 const TodoList = ({ todos = [], onRemovePressed, onCompletedPressed }) => (
   <div className="list-wrapper">
@@ -29,8 +28,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     onRemovePressed: text => dispatch(removeTodo(text)),
-  onCompletedPressed: text => dispatch(markTodoAsCompleted(text)),
-  onDisplayAlertClicked: text => dispatch(displayAlert(text))
+    onCompletedPressed: text => dispatch(markTodoAsCompleted(text))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

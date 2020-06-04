@@ -1,24 +1,10 @@
-import {
-  loadTodosInProgress,
-  loadTodosSuccess,
-  loadTodosFailure,
-} from "../redux/actions";
+export const displayAlert = () =>(dispatch, getState) => {
+    alert("hello");
+}
 
-export const displayAlert = (text) => () => {
-  alert(text);
-};
+export const loadTodos = () => async () => {
 
-export const loadTodos = () => async (dispatch, getState) => {
-  try {
-    dispatch(loadTodosInProgress());
-    const response = await fetch("http://localhost:8080/todos");
-    const todos = await response.json();
-    dispatch(loadTodosSuccess(todos));
-  } catch (e) {
-      dispatch(loadTodosFailure());
-      dispatch(displayAlert(e))
-  }
-};
+}
 
 /*
 Now it's time to create our first thunk. Inside our to-do folder, 
